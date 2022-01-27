@@ -1,0 +1,67 @@
+:root {
+  /* --color1: #2e25b6; */
+  --color1: #222529;
+  --color2: #848380;
+  --color3: #d5a463;
+  --color4: #dccfc3;
+  --color5: #5a8b55;
+  --color6: #90c777;
+  --color7: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New";
+}
+
+.item_card {
+  background-color: var(--color1);
+  border-color: var(--color1);
+  border-radius: 15px;
+  width: 15vw;
+  height: 20vw;
+  color: var(--color7);
+  border: 2px solid;
+  padding: 1vw;
+  margin: 4vw;
+  text-align: center;
+}
+
+.item_card .item_image {
+  padding-top: 0.7vw;
+  width: 10vw;
+  border-radius: 30px;
+}
+
+.item_card .item_title {
+  padding-top: 0.5vw;
+}
+
+.item_card .delete {
+  background-color: var(--color2);
+}
+
+#item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* .center-navbar {
+  width: 30%;
+  margin-left: 35%;
+} */
+
+.groceries {
+  /* background-color: var(--color1);
+  border-color: var(--color1);
+  border-radius: 15px;
+  width: 30vw;
+  height: 50vw;
+  color: var(--color7);
+  border: 2px solid;
+  padding: 1vw;
+  margin: 4vw; */
+  text-align: center;
+}

@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 function Header() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" className="justify-content-center">
         <Container>
           <Navbar.Brand as={Link} to="/">
             Fridge App
