@@ -9,8 +9,8 @@ import Card from "./Card";
 
 function Items({ items, handleDelete }) {
   return (
-    <>
-      <h1>What's in my fridge?</h1>
+    <div id="items_container">
+      <h1 id="items_title">What's in my fridge?</h1>
       <div id="items">
         {items.map((i) => (
           <Card
@@ -20,7 +20,7 @@ function Items({ items, handleDelete }) {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

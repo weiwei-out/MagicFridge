@@ -23,10 +23,11 @@
   width: 15vw;
   height: 20vw;
   color: var(--color7);
-  border: 2px solid;
+  /* border: 2px solid; */
   padding: 1vw;
   margin: 4vw;
   text-align: center;
+  box-shadow: 20px -20px var(--color2);
 }
 
 .item_card .item_image {
@@ -36,11 +37,20 @@
 }
 
 .item_card .item_title {
-  padding-top: 0.5vw;
+  padding: 0.5vw;
+  font-size: 1.1vw;
+}
+
+.item_card .item_expiration_date {
+  font-size: 0.4vw;
 }
 
 .item_card .delete {
   background-color: var(--color2);
+}
+
+.item_card .delete:hover {
+  background-color: red;
 }
 
 #item {
@@ -64,4 +74,11 @@
   padding: 1vw;
   margin: 4vw; */
   text-align: center;
+}
+
+#items_container #items_title {
+  text-align: center;
+  padding-top: 1vw;
+  font-size: 1.5vw;
+  /* background-color: var(--color5); */
 }
