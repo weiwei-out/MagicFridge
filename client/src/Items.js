@@ -7,10 +7,11 @@ import Card from "./Card";
 
 */
 
-function Items({ items }) {
+function Items({ items,handleDelete }) {
   return (
     <>
       <h1>What's in my fridge?</h1>
+      {items.map(i => <Card item={i} handleDelete={handleDelete} key={`${i.id}${i.item_name}`}/>)}
     </>
   );
 }
