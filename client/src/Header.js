@@ -11,13 +11,13 @@ function Header() {
             Fridge App
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/Items" activeClassName="active">
+            <Nav.Link as={Link} to="/Items">
               Items
             </Nav.Link>
-            <Nav.Link as={Link} to="/Receipts" activeClassName="active">
+            <Nav.Link as={Link} to="/Receipts">
               TEST
             </Nav.Link>
-            <Nav.Link as={Link} to="/Groceries" activeClassName="active">
+            <Nav.Link as={Link} to="/Groceries">
               Add Groceries
             </Nav.Link>
           </Nav>

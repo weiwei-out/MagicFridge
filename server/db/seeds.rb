@@ -3,9 +3,12 @@ fridge1 = Fridge.create()
 
 puts "Creating items..."
 
-Item.create(item_name: "Milk", item_type: "Dairy", image: "db/Pictures/milk.png", price: 4, quantity: 1, purchase_date: "1/15/22", expiry_date: "2/10/22", fridge_id: fridge1.id )
-Item.create(item_name: "Chicken Breast", item_type: "Meat", image: "db/Pictures/chicken.png", price: 6, quantity: 1, purchase_date: "1/12/22", expiry_date: "1/19/22", fridge_id: fridge1.id )
-Item.create(item_name: "Cheddar Cheese", item_type: "Dairy", image: "db/Pictures/cheese.png", price: 3, quantity: 1, purchase_date: "2/12/22", expiry_date: "3/5/22", fridge_id: fridge1.id )
+Item.create(item_name: "Milk", item_type: "Dairy", image: "server/db/Pictures/milk.png", price: 4, quantity: 1, purchase_date: "1/15/22", expiry_date: "2/10/22", fridge_id: fridge1.id )
+Item.create(item_name: "Chicken Breast", item_type: "Meat", image: "chicken.png", price: 6, quantity: 1, purchase_date: "1/12/22", expiry_date: "1/19/22", fridge_id: fridge1.id )
+# Item.create(item_name: "Cheddar Cheese", item_type: "Dairy", image: "db/Pictures/cheese.png", price: 3, quantity: 1, purchase_date: "2/12/22", expiry_date: "3/5/22", fridge_id: fridge1.id )
+Item.create(item_name: "Cheddar Cheese", item_type: "Dairy", image: "client/public/logo192.png", price: 3, quantity: 1, purchase_date: "2/12/22", expiry_date: "3/5/22", fridge_id: fridge1.id )
+Item.create(item_name: "Cheddar Cheese", item_type: "Dairy", image: "test/logo192.png", price: 3, quantity: 1, purchase_date: "2/12/22", expiry_date: "3/5/22", fridge_id: fridge1.id )
+Item.create(item_name: "Cheddar Cheese", item_type: "Dairy", image: "logo512.png", price: 3, quantity: 1, purchase_date: "2/12/22", expiry_date: "3/5/22", fridge_id: fridge1.id )
 Item.create(item_name: "Eggs", price: 4, item_type: "Poultry", image: "db/Pictures/eggs.png", quantity: 12, purchase_date: "2/12/22", expiry_date: "3/5/22", fridge_id: fridge1.id )
 Item.create(item_name: "Strawberries", item_type: "Fruit", image: "db/Pictures/strawberry.png", price: 4, quantity: 1, purchase_date: "2/12/22", expiry_date: "3/5/22", fridge_id: fridge1.id )
 Item.create(item_name: "Blueberries", item_type: "Fruit", image: "db/Pictures/blueberry.png", price: 4, quantity: 1, purchase_date: "2/12/22", expiry_date: "3/5/22", fridge_id: fridge1.id )

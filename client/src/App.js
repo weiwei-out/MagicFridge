@@ -5,8 +5,18 @@ import Home from "./Home";
 import Items from "./Items";
 import Receipts from "./Receipts";
 import Groceries from "./AddGroceries";
+import Card from "./Card";
 
 function App() {
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:9292/items")
+      .then((r) => r.json())
+      .then(setItems)
+      .then(console.log(items));
+    // .then((items) => console.log(items));
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -16,10 +26,13 @@ function App() {
             <Home />
           </Route>
           <Route path="/Items">
-            <Items />
+            <Items items={items} />
           </Route>
-          <Route path="/Receipts">
+          {/* <Route path="/Receipts">
             <Receipts />
+          </Route> */}
+          <Route path="/Receipts">
+            <Card items={items} />
           </Route>
           <Route path="/Groceries">
             <Groceries />
