@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState} from "react";
 import Card from "./Card";
 
 /*
@@ -8,11 +8,26 @@ import Card from "./Card";
 */
 
 function Items({ items, handleDelete }) {
+  const [type, setType]=useState("all")
+
+const filteredItems = items.filter((item)=>item.item_type===type)
   return (
     <>
       <h1>What's in my fridge?</h1>
+      <select onChange={(e) => setType(e.target.value)}>
+        <option value="all" >all</option>
+        <option value="Dairy" >dairy</option>
+        <option value="Fruit" >fruit</option>
+        <option value="Vegetable">vegetable</option>
+        <option value="Dip">Dip</option>
+        <option value="Sauce">Sauce</option>
+        <option value="Meat">Meat</option>
+        <option value="Poultry">Poultry</option>
+        <option value="Beverage">Beverage</option>
+    
+      </select>
       <div id="items">
-        {items.map((i) => (
+        {(type==="all"?items:filteredItems).map((i) => (
           <Card
             item={i}
             handleDelete={handleDelete}
