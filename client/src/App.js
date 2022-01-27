@@ -16,6 +16,31 @@ function App() {
       .then(console.log(items));
     // .then((items) => console.log(items));
   }, []);
+  //Creates a new item
+function postItem(item) {
+  fetch("http://localhost:9292/items",{
+      method: "POST",
+      headers:{
+        'Content-Type': "application/json"
+      },
+      body: JSON.stringify(item)
+      })
+    .then(res => res.json())
+    .then(newItem => {
+      setItems([newItem,...items])
+    })
+  }
+
+  //Deletes item
+function handleDelete(id) {
+  fetch(`http://localhost:9292/items/${id}`, {
+    method: 'DELETE'
+  })
+  .then(res => res.json())
+  .then(data => {
+    setItems(items.filter(i => i.id !== id))
+  })
+}
 
   return (
     <div className="App">
@@ -26,16 +51,16 @@ function App() {
             <Home />
           </Route>
           <Route path="/Items">
-            <Items items={items} />
+          <Items items={items} handleDelete={handleDelete} />
           </Route>
           {/* <Route path="/Receipts">
             <Receipts />
           </Route> */}
           <Route path="/Receipts">
-            <Card items={items} />
+          {items.map(i => <Card item={i} handleDelete={handleDelete} key={`${i.id}${i.item_name}`}/>)}
           </Route>
           <Route path="/Groceries">
-            <Groceries />
+          <Groceries postItem={postItem}/>
           </Route>
         </Switch>
       </BrowserRouter>
