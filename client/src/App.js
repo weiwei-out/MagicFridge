@@ -9,6 +9,9 @@ import Card from "./Card";
 
 function App() {
   const [items, setItems] = useState([]);
+  // const [sortItem, setSort] = useState([]);
+
+  // # get all food items
   useEffect(() => {
     fetch("http://localhost:9292/items")
       .then((r) => r.json())
@@ -16,6 +19,35 @@ function App() {
       .then(console.log(items));
     // .then((items) => console.log(items));
   }, []);
+
+  // function sortItem(item) {
+  //   fetch("http://localhost:9292/items/by_date")
+  //   .then((r) => r.json())
+  //   .then(setSort)
+  //   .then(console.log(items));
+  // } 
+
+    //Creates a new item
+  function postItem(item) {
+    fetch(
+      //TODO: Write a post
+    )
+      .then(res => res.json())
+      .then(newItem => {
+        setItems([newItem,...items])
+      })
+    }
+
+    //Deletes item
+  function handleDelete(id) {
+    fetch(`http://localhost:9292/items/${id}`, {
+      method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(data => {
+      setItems(items.filter(i => i.id !== id))
+    })
+  }
 
   return (
     <div className="App">
@@ -32,10 +64,10 @@ function App() {
             <Receipts />
           </Route> */}
           <Route path="/Receipts">
-            <Card items={items} />
+          {items.map(i => <Card item={i} handleDelete={handleDelete} key={`${i.id}${i.item_name}`}/>)}
           </Route>
           <Route path="/Groceries">
-            <Groceries />
+            <Groceries postItem={postItem} />
           </Route>
         </Switch>
       </BrowserRouter>
@@ -44,3 +76,4 @@ function App() {
 }
 
 export default App;
+
