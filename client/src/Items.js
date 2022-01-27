@@ -26,6 +26,8 @@ const filteredItems = items.filter((item)=>item.item_type===type)
         <option value="Beverage">Beverage</option>
     
       </select>
+    <div id="items_container">
+      <h1 id="items_title">What's in my fridge?</h1>
       <div id="items">
         {(type==="all"?items:filteredItems).map((i) => (
           <Card
@@ -35,6 +37,7 @@ const filteredItems = items.filter((item)=>item.item_type===type)
           />
         ))}
       </div>
+    </div>
     </>
   );
 }
