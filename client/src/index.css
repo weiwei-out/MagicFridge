@@ -31,6 +31,11 @@
   box-shadow: 20px -20px var(--color2);
 }
 
+.item_card:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
 .item_card .item_image {
   padding-top: 0.7vw;
   width: 8vw;
@@ -165,11 +170,15 @@
 }
 
 #title {
-  justify-content: right;
+  justify-content: center;
   font-size: 2vw;
   padding-top: 1vw;
-  margin-left: 30vw;
-  margin-right: 8vw;
+  margin-left: 25vw;
+  margin-right: 7vw;
+}
+
+#title2 {
+  justify-content: left;
 }
 
 .me-auto {
@@ -179,12 +188,56 @@
 }
 
 .nav {
-  margin-left: 4vw;
+  margin-left: 5vw;
   width: 5vw;
 }
 
+/* .nav-link {
+  background-color: yellow;
+  color: red;
+} */
 /* #bar {
   margin-top: 0.5vw;
   height: 1.4vw;
   background-color: var(--color1);
 } */
+
+#image1 {
+  margin-top: 3vw;
+  margin-left: 10vw;
+  width: 40vw;
+}
+
+#image2 {
+  margin-top: 21vw;
+  margin-left: 9vw;
+  width: 13vw;
+}
+/* 
+.image1:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.image2:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+} */
+
+#spans {
+  margin-top: 3vw;
+}
+
+#span1 {
+  /* margin-top: 3vw; */
+  margin-left: 33vw;
+  font-size: 2vw;
+  /* padding-top: 3vw; */
+}
+
+#span2 {
+  /* margin-top: 3vw;
+  padding-top: 3vw; */
+  margin-left: 12vw;
+  font-size: 2vw;
+}
