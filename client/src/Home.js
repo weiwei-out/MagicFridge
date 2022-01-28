@@ -1,11 +1,21 @@
-import React from "react";
+import React, {useState}from "react";
+import { useHistory } from "react-router-dom";
 
 function Home() {
+  const [close, setClose] = useState(true)
+  function mouseOver(){
+    setClose(false)
+  }
+  function mouseOut(){
+    setClose(true)
+  }
+  let history = useHistory();
+ 
   return (
     <>
-      <img
-        src="https://cdn4.iconfinder.com/data/icons/furniture-294/510/Refrigerator_fridge_open-512.png"
-        alt=""
+      <img  onMouseOver={mouseOver} onMouseOut={mouseOut} onClick={()=>(history.push("/Items"))}
+      src={close?("Icons/closed.png"):("Icons/open.png")}
+        alt="myfirdge"
       />
     </>
   );
