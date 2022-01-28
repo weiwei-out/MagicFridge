@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
     end
     # creates a new item in the database
     post '/items' do
-      items = Item.create(
+      Item.create(
         item_name: params[:item_name],
         item_type: params[:item_type],
         image: params[:image],
@@ -27,9 +27,35 @@ class ApplicationController < Sinatra::Base
         purchase_date: params[:purchase_date],
         expiry_date: params[:expiry_date],
         fridge_id: params[:fridge_id]
+      ).to_json
+
+      Item.update(
+        item_name: params[:item_name],
+        item_type: params[:item_type],
+        image: params[:image],
+        price: params[:price],
+        quantity: params[:quantity],
+        purchase_date: params[:purchase_date],
+        expiry_date: params[:expiry_date],
+        fridge_id: params[:fridge_id]
+      ).to_json
+      
+    end
+
+    patch '/items/:id' do
+      updated_item = params[:updatedItem]
+      items = Item.all.find(updated_item[:id])
+      items.update(
+        item_type: updated_item[:item_type],
+        price: updated_item[:price],
+        quantity: updated_item[:quantity],
+        purchase_date: updated_item[:purchase_date],
+        expiry_date: updated_item[:expiry_date],
+        fridge_id: updated_item[:fridge_id]
       )
       items.to_json
     end
+
     # deletes item from the database by id
     delete '/items/:id' do
       items = Item.find(params[:id])

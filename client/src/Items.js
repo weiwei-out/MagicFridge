@@ -7,7 +7,7 @@ import Card from "./Card";
 
 */
 
-function Items({ items, handleDelete }) {
+function Items({ items, handleDelete, patchItem }) {
   const [type, setType]=useState("all")
 
 const filteredItems = items.filter((item)=>item.item_type===type)
@@ -15,9 +15,9 @@ const filteredItems = items.filter((item)=>item.item_type===type)
     <>
       <h1>What's in my fridge?</h1>
       <select onChange={(e) => setType(e.target.value)}>
-        <option value="all" >all</option>
-        <option value="Dairy" >dairy</option>
-        <option value="Fruit" >fruit</option>
+        <option value="all" >All</option>
+        <option value="Dairy" >Dairy</option>
+        <option value="Fruit" >Fruit</option>
         <option value="Vegetable">vegetable</option>
         <option value="Dip">Dip</option>
         <option value="Sauce">Sauce</option>
@@ -34,6 +34,7 @@ const filteredItems = items.filter((item)=>item.item_type===type)
             item={i}
             handleDelete={handleDelete}
             key={`${i.id}${i.item_name}`}
+            patchItem={patchItem}
           />
         ))}
       </div>
