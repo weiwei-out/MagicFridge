@@ -1,4 +1,4 @@
-import React,{ useState} from "react";
+import React, { useState } from "react";
 import Card from "./Card";
 
 /*
@@ -8,28 +8,27 @@ import Card from "./Card";
 */
 
 function Items({ items, handleDelete }) {
-  const [type, setType]=useState("all")
+  const [type, setType] = useState("all");
 
-const filteredItems = items.filter((item)=>item.item_type===type)
+  const filteredItems = items.filter((item) => item.item_type === type);
   return (
-    <>
-      <h1>What's in my fridge?</h1>
-      <select onChange={(e) => setType(e.target.value)}>
-        <option value="all" >all</option>
-        <option value="Dairy" >dairy</option>
-        <option value="Fruit" >fruit</option>
-        <option value="Vegetable">vegetable</option>
-        <option value="Dip">Dip</option>
-        <option value="Sauce">Sauce</option>
-        <option value="Meat">Meat</option>
-        <option value="Poultry">Poultry</option>
-        <option value="Beverage">Beverage</option>
-    
-      </select>
     <div id="items_container">
       <h1 id="items_title">What's in my fridge?</h1>
+      <div id="filter">
+        <select id="filter3" onChange={(e) => setType(e.target.value)}>
+          <option value="all">All</option>
+          <option value="Dairy">Dairy</option>
+          <option value="Fruit">Fruit</option>
+          <option value="Vegetable">Vegetable</option>
+          <option value="Dip">Dip</option>
+          <option value="Sauce">Sauce</option>
+          <option value="Meat">Meat</option>
+          <option value="Poultry">Poultry</option>
+          <option value="Beverage">Beverage</option>
+        </select>
+      </div>
       <div id="items">
-        {(type==="all"?items:filteredItems).map((i) => (
+        {(type === "all" ? items : filteredItems).map((i) => (
           <Card
             item={i}
             handleDelete={handleDelete}
@@ -38,7 +37,6 @@ const filteredItems = items.filter((item)=>item.item_type===type)
         ))}
       </div>
     </div>
-    </>
   );
 }
 

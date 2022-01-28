@@ -25,32 +25,40 @@ function AddGroceries({ postItem }) {
   }
 
   return (
-    <div id="groceries">
-      <h1> Stock my fridge! </h1>
-      <h4> Put your groceries in your fridge</h4>
-
-      <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input type="text" name="item_name" onChange={handleChange} />
-        <p></p>
-        <label>Purchase Date(mon/day/year):</label>
-        <input type="text" name="purchase_date" onChange={handleChange} />
-        <p></p>
-        <label>Expirition.Date(mon/day/year):</label>
-        <input type="text" name="expiry_date" onChange={handleChange} />
-        <p></p>
-        <label>Type:</label>
-        <input type="text" name="item_type" onChange={handleChange} />
-        <p></p>
-        <label>Quantity:</label>
-        <input type="number" name="quantity" onChange={handleChange} />
-        <p></p>
-        <label>Image:</label>
-        <input type="text" name="image" onChange={handleChange} />
-        <p></p>
-        <button type="submit">create</button>
-      </form>
-    </div>
+    <>
+      <h1 id="groceries_title"> Stock my fridge! </h1>
+      <div id="bar" />
+      <div id="groceries">
+        <div id="groceries2box">
+          <h4 id="groceries2"> Put your groceries in your fridge!</h4>
+        </div>
+        <div id="groceries3box">
+          <form onSubmit={handleSubmit}>
+            <label>Item Name:</label>
+            <input type="text" name="item_name" onChange={handleChange} />
+            <p></p>
+            <label>Purchase Date(MM/DD/YYYY):</label>
+            <input type="text" name="purchase_date" onChange={handleChange} />
+            <p></p>
+            <label>Expirition Date(MM/DD/YYYY):</label>
+            <input type="text" name="expiry_date" onChange={handleChange} />
+            <p></p>
+            <label>Type:</label>
+            <input type="text" name="item_type" onChange={handleChange} />
+            <p></p>
+            <label>Quantity:</label>
+            <input type="number" name="quantity" onChange={handleChange} />
+            <p></p>
+            <label>Image URL:</label>
+            <input type="text" name="image" onChange={handleChange} />
+            <p></p>
+            <button id="submit1" type="submit">
+              create
+            </button>
+          </form>
+        </div>
+      </div>
+    </>
   );
 }
 
