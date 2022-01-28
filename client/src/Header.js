@@ -7,7 +7,7 @@ function Header() {
     <>
       {/* <Navbar bg="dark" variant="dark" className="justify-content-center"> */}
       <Navbar bg="dark" variant="dark">
-        <Container>
+        <Container id="title2">
           <Navbar.Brand as={Link} to="/" id="title">
             Flatiron Fridge
           </Navbar.Brand>
@@ -21,9 +21,9 @@ function Header() {
             <Nav.Link as={Link} to="/Groceries" className="nav">
               Add Groceries
             </Nav.Link>
-            <Nav.Link as={Link} to="/Game">
+            {/* <Nav.Link as={Link} to="/Game" className="nav">
               Play Game
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
         </Container>
       </Navbar>
