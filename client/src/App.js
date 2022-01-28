@@ -9,7 +9,7 @@ import Card from "./Card";
 
 function App() {
   const [items, setItems] = useState([]);
-  const [close, setClose] = useState(true)
+  
   useEffect(() => {
     fetch("http://localhost:9292/items")
       .then((r) => r.json())
