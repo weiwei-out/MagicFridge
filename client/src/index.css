@@ -32,30 +32,38 @@
 
 .item_card .item_image {
   padding-top: 0.7vw;
-  width: 10vw;
+  width: 8vw;
   border-radius: 30px;
+  background-color: var(--color4);
 }
 
 .item_card .item_title {
   padding: 0.5vw;
   font-size: 1.1vw;
+  background-color: var(--color5);
+  margin-top: 0.7vw;
+  margin-bottom: 1vw;
+  border-radius: 15px;
 }
 
 .item_card .item_expiration_date {
-  font-size: 0.4vw;
+  font-size: 0.5vw;
+  margin: 0.3vw;
 }
 
 .item_card .delete {
+  margin-top: 0.2vw;
   background-color: var(--color2);
+  font-size: 0.5vw;
 }
 
 .item_card .delete:hover {
   background-color: red;
 }
 
-#item {
+#items {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* .center-navbar {
@@ -63,17 +71,49 @@
   margin-left: 35%;
 } */
 
-.groceries {
-  /* background-color: var(--color1);
+#groceries {
+  background-color: var(--color1);
   border-color: var(--color1);
   border-radius: 15px;
-  width: 30vw;
-  height: 50vw;
-  color: var(--color7);
+  width: 40vw;
+  height: 28vw;
+  /* color: var(--color7); */
   border: 2px solid;
-  padding: 1vw;
-  margin: 4vw; */
-  text-align: center;
+  /* padding: 1vw; */
+  margin-top: 2vw;
+  padding-top: 1vw;
+
+  text-align: right;
+  font-size: 1vw;
+  font-weight: 100;
+  margin-top: 4vw;
+  margin-left: 30vw;
+  box-shadow: 20px -20px var(--color2);
+}
+
+#groceries2 {
+  color: var(--color7);
+  font-size: 1.5vw;
+  /* background-color: var(--color7); */
+}
+
+#groceries2box {
+  background-color: var(--color5);
+  border-radius: 15px;
+  margin: 1vw;
+  padding: 0.5vw;
+  margin-left: 3vw;
+  margin-right: 4vw;
+}
+
+#groceries3box {
+  padding-right: 4vw;
+}
+
+#groceries label {
+  color: var(--color7);
+  font-weight: 200;
+  margin-right: 2.5vw;
 }
 
 #items_container #items_title {
@@ -82,3 +122,68 @@
   font-size: 1.5vw;
   /* background-color: var(--color5); */
 }
+
+#filter {
+  /* align-items: center; */
+  background-color: var(--color5);
+  margin-top: 0.5vw;
+  padding-top: 0.1vw;
+  padding-bottom: 0.1vw;
+  font-size: 0.8vw;
+  text-align: center;
+  width: 6vw;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+#filter3 {
+  background-color: var(--color5);
+  color: var(--color7);
+  border: 0px;
+}
+.margin {
+  background-color: var(--color4);
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  border-radius: 15px;
+}
+
+#groceries_title {
+  text-align: center;
+  padding-top: 1vw;
+  font-size: 1.5vw;
+  background-color: var(--color7);
+}
+
+.submit1:hover {
+  background-color: var(--color5);
+}
+
+.submit1 {
+  background-color: var(--color5);
+}
+
+#title {
+  justify-content: right;
+  font-size: 2vw;
+  padding-top: 1vw;
+  margin-left: 30vw;
+  margin-right: 8vw;
+}
+
+.me-auto {
+  font-size: 1vw;
+  justify-content: right;
+  margin-top: 0.5vw;
+}
+
+.nav {
+  margin-left: 4vw;
+  width: 5vw;
+}
+
+/* #bar {
+  margin-top: 0.5vw;
+  height: 1.4vw;
+  background-color: var(--color1);
+} */

@@ -16,7 +16,13 @@ function Card({ item, handleDelete }) {
   // const pic =   {items[0].image}
   return (
     <div className="item_card">
-      <img alt="none loaded :(" src={`${item.image}`} className="item_image" />
+      <div className="margin">
+        <img
+          alt="none loaded :("
+          src={`${item.image}`}
+          className="item_image"
+        />
+      </div>
       <h1 className="item_title"> {item.item_name} </h1>
       <p className="item_expiration_date">
         {" "}
@@ -26,7 +32,7 @@ function Card({ item, handleDelete }) {
         {" "}
         Expiration Date: {item.expiry_date}{" "}
       </p>
-      <p className="days_between"> {daysBetween()} Day(s) left </p>
+      <p className="item_expiration_date"> {daysBetween()} Day(s) left </p>
       <button className="delete" onClick={() => handleDelete(item.id)}>
         Remove Item
       </button>
