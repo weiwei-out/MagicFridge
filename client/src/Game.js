@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       {pics.map((pic)=> 
-      <img style={{}} onMouseOver={()=>setNum(pic.id)} onMouseOut={()=>setNum(0)} key={pic.id}
+      <img style={{}} onClick={()=>setNum(pic.id)}  key={pic.id}
        src= {pic.id===num?`${pic.img}`:("Icons/closed.png")}/>
        )
       }
