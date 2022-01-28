@@ -35,6 +35,17 @@ Item.create(item_name: "Bell Pepper", item_type: "Vegetable", image: "Icons/bell
 Item.create(item_name: "Ham", item_type: "Meat", image: "Icons/ham.png", price: 3, quantity: 1, purchase_date: "02/12/21", expiry_date: "04/22/2021", fridge_id: fridge1.id )
 Item.create(item_name: "Mayonnaise", item_type: "Sauce", image: "Icons/mayonnaise.png", price: 3, quantity: 1, purchase_date: "02/12/2021", expiry_date: "04/22/2021", fridge_id: fridge1.id )
 Item.create(item_name: "Pickles", item_type: "Vegetable", image: "Icons/pickle.png", price: 3, quantity: 1, purchase_date: "02/12/2021", expiry_date: "04/22/2021", fridge_id: fridge1.id )
+puts "start th images"
+Pic.create(name: "Lemonade", img: "Icons/lemonade.png" )
+Pic.create(name: "Sprite", img: "Icons/soda.png" )
+Pic.create(name: "Hummus",  img: "Icons/hummus.png" )
+Pic.create(name: "Guacamole",  img: "Icons/guacamole.png" )
+Pic.create(name: "Yogurt",  img: "Icons/yogurt.png")
+Pic.create(name: "Avocados",img: "Icons/avocado.png" )
+Pic.create(name: "Butter",  img: "Icons/butter.png" )
+Pic.create(name: "Spinach",  img: "Icons/spinach.png" )
+Pic.create(name: "Bacon",  img: "Icons/bacon.png")
+Pic.create(name: "Carrots", img: "Icons/carrots.png" )
 
 
 puts "✅ Done seeding!"

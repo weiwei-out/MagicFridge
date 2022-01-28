@@ -6,6 +6,7 @@ import Items from "./Items";
 import Receipts from "./Receipts";
 import Groceries from "./AddGroceries";
 import Card from "./Card";
+import Game from "./Game";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -63,6 +64,10 @@ function handleDelete(id) {
           <Route path="/Groceries">
           <Groceries postItem={postItem}/>
           </Route>
+          <Route path="/Game">
+          <Game/>
+          </Route>
+
         </Switch>
       </BrowserRouter>
     </div>

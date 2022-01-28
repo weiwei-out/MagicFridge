@@ -36,4 +36,9 @@ class ApplicationController < Sinatra::Base
       items.destroy
       items.to_json
     end
+    # game pics
+    get "/Game" do
+      pics= Pic.shuffle
+      pics.to_json
+    end 
 end
