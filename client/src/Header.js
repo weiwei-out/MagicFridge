@@ -8,16 +8,21 @@ function Header() {
       {/* <Navbar bg="dark" variant="dark" className="justify-content-center"> */}
       <Navbar bg="dark" variant="dark">
         <Container id="title2">
-          <Navbar.Brand as={Link} to="/" id="title">
-            Flatiron Fridge
-          </Navbar.Brand>
+          {/* <img src="Icons/fridgelogo.png" alt="" id="logo" />
+          {/* <Navbar.Brand as={Link} to="/" id="title">
+            FukGit Fridge
+          </Navbar.Brand> */}
+          <Link to="/">
+            <img src="Icons/fridgelogo.png" alt="Logo" id="logo" />
+          </Link>
           <Nav className="me-auto">
+            {/* <Nav.Link as={Link} to="/" className="nav">
+              Home
+            </Nav.Link> */}
             <Nav.Link as={Link} to="/Items" className="nav">
               Items
             </Nav.Link>
-            {/* <Nav.Link as={Link} to="/Receipts">
-              TEST
-            </Nav.Link> */}
+
             <Nav.Link as={Link} to="/Groceries" className="nav">
               Add Groceries
             </Nav.Link>
